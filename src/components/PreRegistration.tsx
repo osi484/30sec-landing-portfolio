@@ -19,13 +19,20 @@ export default function PreRegistration() {
           생존자들의 목록에 당신의 이름을 전송하십시오.
         </p>
 
-        <form className="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto">
+        <form 
+          className="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto"
+          onSubmit={(e) => {
+            e.preventDefault();
+            alert("이메일 정보는 어디에도 저장되지 않습니다. (데모 페이지)");
+          }}
+        >
           <input 
             type="email" 
             placeholder="이메일을 입력하세요" 
             className="flex-1 px-8 py-5 bg-white/5 border border-gray-800 text-white placeholder-gray-600 focus:outline-none focus:border-urgent focus:ring-1 focus:ring-urgent transition-all backdrop-blur-sm"
+            required
           />
-          <button className="px-12 py-5 bg-white text-black text-xl font-black hover:bg-urgent hover:text-white transition-all">
+          <button type="submit" className="px-12 py-5 bg-white text-black text-xl font-black hover:bg-urgent hover:text-white transition-all">
             SUBMIT
           </button>
         </form>

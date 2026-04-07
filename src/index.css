@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-urgent: #FF1111;
+  --color-deep: #050505;
+  --color-void: #000000;
+  --font-tense: "Space Grotesk", sans-serif;
+  
+  --animate-pulse-fast: pulse 0.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-glitch: glitch 0.2s ease-in-out infinite;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+:root {
+  background-color: var(--color-void);
+  color: white;
+  font-family: var(--font-tense);
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
